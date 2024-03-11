@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './main.scss';
-import InputContainer from './components/inputContainer';
-import OutputContainer from './components/outputContainer';
+import InputContainer from './components/forms/inputContainer';
+import OutputContainer from './components/outputs/outputContainer';
 
 function App() {
   return (

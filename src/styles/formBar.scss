@@ -1,0 +1,83 @@
+.cvBar {
+  padding-top: toRem(13);
+  padding-left: toRem(36);
+  padding-right: toRem(38);
+  padding-bottom: toRem(13);
+  display: flex;
+  justify-content: flex-start;
+  background-image: linear-gradient(
+    180deg,
+    rgba(238, 214, 249, 1) 0%,
+    rgba(214, 228, 249, 1) 100%
+  );
+  border-radius: toRem(21);
+  align-items: center;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cvBar__Title {
+  font-size: toRem(40);
+  font-weight: 700;
+  font-family: 'Inter';
+  margin-right: 17%;
+}
+
+.cvBar__autoFillButton {
+  padding: toRem(5) toRem(8) toRem(6) toRem(11);
+  border-radius: toRem(12);
+  border: none;
+  margin-right: toRem(25);
+  background-image: linear-gradient(
+    135deg,
+    rgba(162, 64, 197, 1) 0%,
+    rgba(66, 141, 184, 1) 100%
+  );
+  font-size: toRem(18);
+  font-weight: 600;
+  font-family: 'Inter';
+  color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cvBar__autoFillButton:hover,
+.cvBar__saveButton:hover {
+  background-image: linear-gradient(
+    135deg,
+    rgb(131, 48, 161) 0%,
+    rgb(49, 109, 146) 100%
+  );
+}
+
+.cvBar__autoFillButton > span {
+  background-image: url('@svgs/autofillImage.svg');
+  width: toRem(24);
+  height: toRem(24);
+  margin-right: 6px;
+}
+
+.cvBar__saveButton {
+  padding: toRem(6) toRem(12) toRem(5) toRem(14);
+  border-radius: toRem(12);
+  border: none;
+  background-image: linear-gradient(
+    135deg,
+    rgba(162, 64, 197, 1) 0%,
+    rgba(66, 141, 184, 1) 100%
+  );
+  font-size: toRem(20);
+  font-weight: 600;
+  font-family: 'Inter';
+  color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cvBar__saveButton > span {
+  background-image: url('@svgs/saveImage.svg');
+  width: toRem(20);
+  height: toRem(20);
+  margin-right: toRem(11);
+}
