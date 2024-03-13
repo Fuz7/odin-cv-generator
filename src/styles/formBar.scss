@@ -16,7 +16,7 @@
 }
 
 .cvBar__Title {
-  font-size: toRem(40);
+  font-size: clamp(toRem(24), 2vw, toRem(40));
   font-weight: 700;
   font-family: 'Inter';
   margin-right: 17%;
@@ -80,4 +80,19 @@
   width: toRem(20);
   height: toRem(20);
   margin-right: toRem(11);
+}
+
+
+.formBars__button{
+  display: flex;
+  justify-content: start;
+
+}
+
+.formBars__title{
+
+}
+
+.formBars__dropDownIcon{
+  
 }
