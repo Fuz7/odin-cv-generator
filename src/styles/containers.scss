@@ -4,6 +4,10 @@
 
 .inputContainer {
   width: 50%;
+  display: flex;
+  flex-direction: column;
   padding-left: 14%;
   padding-top: toRem(44);
+  margin-bottom: toRem(14);
+  gap: 13px;
 }

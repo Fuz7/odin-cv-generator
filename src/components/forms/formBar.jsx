@@ -1,6 +1,6 @@
 import dropDownIcon from '@svgs/arrowImage.svg';
 
-function FormBars({ iconUrl, title, isDraggable }) {
+function FormBars({ fileName, title, isDraggable }) {
   const svgUrlString = dropDownIcon + '';
 
   // Input iconUrl Without the dirPath
@@ -15,21 +15,21 @@ function FormBars({ iconUrl, title, isDraggable }) {
         {isDraggable ? (
           <>
             <img
-              alt="Dragable Button"
+              alt="draggable icon"
               className="formBars__draggableImage"
               src={svgUrlwithoutFile + 'draggableImage.svg'}
             ></img>
             <img
               alt={title + 'image'}
               className="formBars__image"
-              src={svgUrlwithoutFile + iconUrl}
+              src={svgUrlwithoutFile + fileName}
             ></img>
           </>
         ) : (
           <img
             alt={title + 'image'}
             className="formBars__image"
-            src={svgUrlwithoutFile + iconUrl}
+            src={svgUrlwithoutFile + fileName}
           ></img>
         )}
 
