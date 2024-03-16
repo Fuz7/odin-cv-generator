@@ -1,8 +1,6 @@
 import FormBars, { CVBar } from './formBar';
 
 function InputContainer() {
-  const a = 2;
-  a = 3;
   const formInputElements = returnFormsInputElements();
   return (
     <>

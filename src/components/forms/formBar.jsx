@@ -78,7 +78,7 @@ function CVBar() {
 
 // Create Object
 function BarData({ inputElements }) {
-  if (inputElements !== undefined &&inputElements[0]['id'] === undefined) {
+  if (inputElements !== undefined && inputElements[0]['id'] === undefined) {
     return (
       <>
         {inputElements.map((elementInfo, index) => {
@@ -87,10 +87,10 @@ function BarData({ inputElements }) {
         ;
       </>
     );
-  } else if(inputElements !==undefined) {
+  } else if (inputElements !== undefined) {
     return;
   }
-  return
+  return;
 }
 
 export default FormBars;
