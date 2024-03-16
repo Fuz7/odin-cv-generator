@@ -1,5 +1,6 @@
 import dropDownIcon from '@svgs/arrowImage.svg';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 function FormBars({ fileName, title, isDraggable, inputElements }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,8 +18,8 @@ function FormBars({ fileName, title, isDraggable, inputElements }) {
 
   return (
     <>
-      <div tabIndex={0} onClick={setVisibility} className="formBars__button">
-        <div className="formBars__iconContainer">
+      <div tabIndex={0} className="formBars__button">
+        <div onClick={setVisibility} className="formBars__iconContainer">
           {isDraggable ? (
             <>
               <img
@@ -50,18 +51,28 @@ function FormBars({ fileName, title, isDraggable, inputElements }) {
         <div
           className={
             isVisible
-              ? 'formBars__inputContainer--visible'
-              : 'formBars__inputContainer'
+              ? 'formBars__columnContainer--visible'
+              : 'formBars__columnContainer'
           }
         >
           <div className="formBars__separator"></div>
-          <BarData inputElements={inputElements}></BarData>
+          {isDraggable ? (
+            false
+          ) : (
+            <BarData inputElements={inputElements}></BarData>
+          )}
         </div>
       </div>
     </>
   );
 }
 
+FormBars.propTypes = {
+  fileName: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  isDraggable: PropTypes.bool.isRequired,
+  inputElements: PropTypes.array,
+};
 function CVBar() {
   return (
     <header className="cvBar">
@@ -76,15 +87,39 @@ function CVBar() {
   );
 }
 
-// Create Object
 function BarData({ inputElements }) {
+  // To Check For personal data
   if (inputElements !== undefined && inputElements[0]['id'] === undefined) {
     return (
       <>
-        {inputElements.map((elementInfo, index) => {
-          return <div key={index}></div>;
-        })}
-        ;
+        <div className="columnContainer__inputContainer">
+          {inputElements.map((elementInfo, index) => {
+            return (
+              <div key={index}>
+                <label htmlFor={elementInfo.title + index}>
+                  {elementInfo.title}
+                </label>
+                {elementInfo.type === 'textField' ? (
+                  <input
+                    id={elementInfo.title + index}
+                    placeholder={elementInfo.placeholder}
+                  ></input>
+                ) : (
+                  false
+                )}
+                {elementInfo.type === 'textArea' ? (
+                  <textarea
+                    id={elementInfo.title + index}
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                ) : (
+                  false
+                )}
+              </div>
+            );
+          })}
+        </div>
       </>
     );
   } else if (inputElements !== undefined) {

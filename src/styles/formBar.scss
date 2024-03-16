@@ -91,7 +91,6 @@
   border: none;
   box-shadow: 0px 4px 4px $shadowColor;
   min-height: toRem(64);
-  cursor: pointer;
 }
 
 .formBars__button:first-of-type {
@@ -138,10 +137,11 @@
   border: none;
   min-height: toRem(58);
   padding-top: toRem(7);
+  cursor: pointer;
 }
 
-.formBars__inputContainer,
-.formBars__inputContainer--visible {
+.formBars__columnContainer,
+.formBars__columnContainer--visible {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -151,11 +151,11 @@
   overflow: hidden;
 }
 
-.formBars__inputContainer--visible {
-  max-height: 200px;
+.formBars__columnContainer--visible {
+  max-height: 1000px;
 }
 
-.formBars__iconContainer:has(+ .formBars__inputContainer--visible)
+.formBars__iconContainer:has(+ .formBars__columnContainer--visible)
   > .formBars__dropDownIcon {
   transform: rotate(180deg);
 }
@@ -166,4 +166,14 @@
   min-width: 94%;
   background-color: #c2c2c2;
   margin-bottom: 30px;
+}
+
+.columnContainer__inputContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(toRem(10), 10%, toRem(52));
+  max-width: 100%;
+  padding-left: toRem(20);
+  padding-right: toRem(24);
+  padding-bottom: toRem(20);
 }
