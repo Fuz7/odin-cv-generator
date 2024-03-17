@@ -95,12 +95,19 @@ function BarData({ inputElements }) {
         <div className="columnContainer__inputContainer">
           {inputElements.map((elementInfo, index) => {
             return (
-              <div key={index}>
-                <label htmlFor={elementInfo.title + index}>
+              <div
+                className="inputContainer__inputAndLabelContainer"
+                key={index}
+              >
+                <label
+                  className="inputContainer__label"
+                  htmlFor={elementInfo.title + index}
+                >
                   {elementInfo.title}
                 </label>
                 {elementInfo.type === 'textField' ? (
                   <input
+                    className="inputContainer__textField"
                     id={elementInfo.title + index}
                     placeholder={elementInfo.placeholder}
                   ></input>
@@ -109,9 +116,11 @@ function BarData({ inputElements }) {
                 )}
                 {elementInfo.type === 'textArea' ? (
                   <textarea
+                    className="inputContainer__textArea"
                     id={elementInfo.title + index}
-                    cols="30"
-                    rows="10"
+                    cols="44"
+                    rows="2"
+                    placeholder={elementInfo.placeholder}
                   ></textarea>
                 ) : (
                   false
