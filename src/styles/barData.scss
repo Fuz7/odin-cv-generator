@@ -1,0 +1,42 @@
+
+.columnContainer__inputContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(toRem(10), 10%, toRem(52));
+  max-width: 100%;
+  padding-left: toRem(20);
+  padding-right: toRem(24);
+  padding-bottom: toRem(20);
+  font-family: 'Inter';
+}
+
+.inputContainer__textField {
+  min-width: clamp(toRem(120), 15vw, toRem(295));
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  padding: toRem(15) toRem(20) toRem(6) toRem(12);
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  font-size: toRem(12);
+}
+
+.inputContainer__inputAndLabelContainer {
+  position: relative;
+  margin-bottom: toRem(20);
+}
+
+.inputContainer__label {
+  position: absolute;
+  top: toRem(-14);
+  left: 10px;
+  padding: toRem(5) toRem(10) toRem(1) toRem(4);
+  background-color: #f4f4f4;
+  font-size: toRem(13);
+}
+
+.inputContainer__textArea {
+  background-color: #f4f4f4;
+  resize: none;
+  border-radius: toRem(4);
+  padding: toRem(15) toRem(11) toRem(37) toRem(11);
+  min-width: clamp(toRem(300), 33vw, toRem(640));
+}
