@@ -58,7 +58,7 @@ function FormBars({ fileName, title, isDraggable, inputElements }) {
         >
           <div className="formBars__separator"></div>
           {isDraggable ? (
-            false
+            <BarData inputElements={[]}></BarData>
           ) : (
             <BarData inputElements={inputElements}></BarData>
           )}

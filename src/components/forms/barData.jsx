@@ -1,7 +1,7 @@
-
 function BarData({ inputElements }) {
   // To Check For personal data
-  if (inputElements !== undefined && inputElements[0]['id'] === undefined) {
+  const hasData = true;
+  if (inputElements.length > 0 && !inputElements[0]?.id) {
     return (
       <>
         <div className="columnContainer__inputContainer">
@@ -43,10 +43,20 @@ function BarData({ inputElements }) {
         </div>
       </>
     );
-  } else if (inputElements !== undefined) {
-    return;
+  } else {
+    console.log('sa');
+    return (
+      <>
+        {hasData ? (
+          <div className="barData__separator">
+            <button className="barData__addData">{}</button>
+          </div>
+        ) : (
+          <></>
+        )}
+      </>
+    );
   }
-  return;
 }
 
-export default BarData
+export default BarData;

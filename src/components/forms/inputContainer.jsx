@@ -21,6 +21,7 @@ function InputContainer() {
           fileName={'educationImage.svg'}
           title="Educational Experience"
           isDraggable={true}
+
         ></FormBars>
         <FormBars
           fileName={'projectsImage.svg'}

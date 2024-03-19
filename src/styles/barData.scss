@@ -1,9 +1,9 @@
-
 .columnContainer__inputContainer {
   display: flex;
   flex-wrap: wrap;
   gap: clamp(toRem(10), 10%, toRem(52));
   max-width: 100%;
+  margin-top: toRem(19);
   padding-left: toRem(20);
   padding-right: toRem(24);
   padding-bottom: toRem(20);
@@ -39,4 +39,10 @@
   border-radius: toRem(4);
   padding: toRem(15) toRem(11) toRem(37) toRem(11);
   min-width: clamp(toRem(300), 33vw, toRem(640));
+}
+
+.barData__separator {
+  @include separator;
+  margin-top: toRem(11);
+  margin-bottom: toRem(14);
 }
