@@ -46,3 +46,14 @@
   margin-top: toRem(11);
   margin-bottom: toRem(14);
 }
+
+.barData__addData {
+  padding: toRem(8) toRem(21) toRem(8);
+  margin-bottom: toRem(13);
+  border: 1px solid black;
+  border-radius: toRem(18);
+  background-color: white;
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: toRem(15);
+}

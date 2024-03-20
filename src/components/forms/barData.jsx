@@ -48,9 +48,10 @@ function BarData({ inputElements }) {
     return (
       <>
         {hasData ? (
-          <div className="barData__separator">
-            <button className="barData__addData">{}</button>
-          </div>
+          <>
+            <div className="barData__separator"></div>
+            <button className="barData__addData">{'+ Data'}</button>
+          </>
         ) : (
           <></>
         )}
