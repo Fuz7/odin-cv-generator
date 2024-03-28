@@ -149,10 +149,13 @@
   align-items: center;
   min-width: 100%;
   overflow: hidden;
+  transition: transform ease 0.25s;
+  transform: translateY(-15px);
 }
 
 .formBars__columnContainer--visible {
   max-height: 1000px;
+  transform: translateY(0px);
 }
 
 .formBars__iconContainer:has(+ .formBars__columnContainer--visible)

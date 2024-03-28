@@ -1,9 +1,16 @@
 import dropDownIcon from '@svgs/arrowImage.svg';
 import { useState } from 'react';
 import BarData from './barData';
+import BarList from './barList';
 import PropTypes from 'prop-types';
 
-function FormBars({ fileName, title, isDraggable, inputElements }) {
+function FormBars({
+  fileName,
+  title,
+  isDraggable,
+  inputElements,
+  elementData,
+}) {
   const [isVisible, setIsVisible] = useState(false);
   const svgUrlString = dropDownIcon + '';
 
@@ -58,7 +65,7 @@ function FormBars({ fileName, title, isDraggable, inputElements }) {
         >
           <div className="formBars__separator"></div>
           {isDraggable ? (
-            <BarData inputElements={[]}></BarData>
+            <BarList></BarList>
           ) : (
             <BarData inputElements={inputElements}></BarData>
           )}
@@ -73,6 +80,7 @@ FormBars.propTypes = {
   title: PropTypes.string.isRequired,
   isDraggable: PropTypes.bool.isRequired,
   inputElements: PropTypes.array,
+  elementData: PropTypes.array,
 };
 function CVBar() {
   return (

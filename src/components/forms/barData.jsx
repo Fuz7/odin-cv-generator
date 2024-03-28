@@ -4,7 +4,7 @@ function BarData({ inputElements }) {
   if (inputElements.length > 0 && !inputElements[0]?.id) {
     return (
       <>
-        <div className="columnContainer__inputContainer">
+        <form className="columnContainer__inputContainer">
           {inputElements.map((elementInfo, index) => {
             return (
               <div
@@ -30,7 +30,7 @@ function BarData({ inputElements }) {
                   <textarea
                     className="inputContainer__textArea"
                     id={elementInfo.title + index}
-                    cols="44"
+                    cols="20"
                     rows="2"
                     placeholder={elementInfo.placeholder}
                   ></textarea>
@@ -40,7 +40,7 @@ function BarData({ inputElements }) {
               </div>
             );
           })}
-        </div>
+        </form>
       </>
     );
   } else {
