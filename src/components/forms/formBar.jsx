@@ -9,7 +9,7 @@ function FormBars({
   title,
   isDraggable,
   inputElements,
-  elementData,
+  // elementData,
 }) {
   const [isVisible, setIsVisible] = useState(false);
   const svgUrlString = dropDownIcon + '';

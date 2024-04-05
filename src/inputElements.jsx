@@ -37,7 +37,22 @@ function returnFormsInputElements() {
         placeholder: 'As a Software Engineer  I...',
       },
     ],
-    workExperienceElements: [{}],
+    educationElements: [
+      {
+        title: 'School Name',
+        type: 'textField',
+        placeholder: 'University Of Mindanao',
+      },
+      {
+        title: 'Course',
+        type: 'textField',
+        placeholder: 'Bachelor Of Science In Com Shop',
+      },
+      { title: 'Start Date', type: 'dateField', placeholder: 'Oct 10, 2023' },
+      { title: 'Address', type: 'textField', placeholder: 'Tokyo, Japan' },
+      { title: 'Ongoing', type: 'booleanField', placeholder: false },
+      { title: 'End Date', type: 'dateField', placeholder: 'Nov 12, 2023' },
+    ],
   };
   return formsElements;
 }
