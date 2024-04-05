@@ -1,5 +1,3 @@
-function BarList({data}){
+function BarList({ data }) {}
 
-}
-
-export default BarList
+export default BarList;

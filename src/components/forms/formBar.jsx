@@ -49,12 +49,7 @@ function FormBars({
             ></img>
           )}
 
-          <span className="formBars__title">{title}</span>
-          <img
-            alt="dropDownIcon"
-            className="formBars__dropDownIcon"
-            src={dropDownIcon}
-          ></img>
+          <DropDownIcon title={title} dropDownIcon={dropDownIcon} />
         </div>
         <div
           className={
@@ -98,3 +93,17 @@ function CVBar() {
 
 export default FormBars;
 export { CVBar };
+
+function DropDownIcon({ title, dropDownIcon }) {
+  return (
+    <>
+      {' '}
+      <span className="formBars__title">{title}</span>
+      <img
+        alt="dropDownIcon"
+        className="formBars__dropDownIcon"
+        src={dropDownIcon}
+      ></img>
+    </>
+  );
+}
